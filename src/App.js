@@ -1,8 +1,22 @@
-//import './App.scss'
+import './App.scss'
+import Editor from './components/Editor'
+import Previewer from './components/Previewer'
+import { marked } from 'marked'
 
 function App() {
+
+  const handleChange = (event) => {
+    const html = marked.parse(event.target.value)
+
+    // Update preview
+    document.getElementById('preview').innerHTML = html
+  }
+
   return (
-    <h1>Hello world</h1>
+    <>
+      <Editor handleChange={handleChange}/>
+      <Previewer />
+    </>
   );
 }
 
