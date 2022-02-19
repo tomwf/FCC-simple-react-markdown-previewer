@@ -1,0 +1,140 @@
+// Russo One font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Russo+One&display=swap');
+
+// Variables
+$cyan: #87b5b5;
+$veryLightCyan: #57e2b1;
+$lightCyan: #c0d8d8;
+$darkCyan: #4aa3a3;
+$veryDarkCyan: #3a5f5f;
+$black: #000000;
+$white: #FFFFFF;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+textarea {
+  border: none;
+}
+
+h1 {
+  border-bottom: 2px solid $black;
+  margin: .75em 0;
+}
+
+h2 {
+  border-bottom: 1px solid $black;
+  margin: .75em 0;
+}
+
+p {
+  margin: 1em 0;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+li {
+  line-height: 1.5;
+}
+
+blockquote {
+  border-left: 3px solid $black;
+  margin: .5em;
+  padding-left: .5em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid $black;
+  padding: .4em .5em .25em .5em;
+}
+
+code {
+  display: inline-block;
+}
+
+code,
+pre {
+  background-color: $white;
+  padding: .25em;
+  font-weight: 700;
+}
+
+body {
+  background-color: $cyan;
+  padding: 2em;
+  font-family: sans-serif;
+}
+
+.window {
+  background-color: $lightCyan;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0px 0px 10px 2px $veryDarkCyan;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    background-color: $darkCyan;
+    padding: .5em;
+    border: 1px $black solid;
+    font-family: 'Russo One', sans-serif;
+    box-shadow: 0px 0px 10px 2px $veryDarkCyan;
+
+    & > svg {
+      font-size: 1.25rem;
+    }
+
+    button {
+      margin-left: auto;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+
+      &:hover {
+        color: $veryLightCyan;
+      }
+    }
+  }
+
+  &__editor {
+    max-width: 600px;
+
+    #editor {
+      resize: vertical;
+      width: 600px;
+      min-height: 200px;
+      background-color: $lightCyan;
+      padding: .25em;
+    }
+  }
+
+  &__preview {
+    max-width: 800px;
+    margin-top: 1.5em;
+
+    #preview {
+      min-height: 200px;
+      padding: 1em;
+    }
+  }
+}
